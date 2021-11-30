@@ -31,7 +31,8 @@ $Time = $Now.AddMinutes(1)
 
 $Action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument ( "C:\Users\533\Documents\GitHub\AssitantPowershell\MainScriptAssistant.ps1" )
 $Desc = " Bot Autonome "
-$Trigger = New-ScheduledTaskTrigger -Once -At $Time
+#$Trigger = New-ScheduledTaskTrigger -Once -At $Time
+$Trigger = New-ScheduledTaskTrigge -AtLogon
 
 $Task = New-ScheduledTask -Action $Action -Description $Desc -Trigger $Trigger
 
