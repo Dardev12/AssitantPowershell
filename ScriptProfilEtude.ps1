@@ -19,4 +19,4 @@ $shell = New-Object -ComObject "Shell.Application"
 $shell.minimizeall()
 
 Start-Sleep -Seconds 2
-SetWallPaper.ps1
+SetWallPaper.ps1 "C:\Users\533\Documents\GitHub\AssitantPowershell\img.jpg"
