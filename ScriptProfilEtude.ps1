@@ -1,6 +1,7 @@
 ﻿$Desktop    = $env:USERPROFILE + "\Desktop\"
 $site = ('https://cegepba.omnivox.ca/Login/Account/Login', 'https://medium.com/tag/programming', 'https://github.com/login')
 $notesFile = $Desktop + "NOTES_$((Get-Date).ToString('yyyy-MM-dd')).txt"
+Set-Location "C:\Users\533\Documents\GitHub\AssitantPowershell\"
 
 ForEach($s in $site)
 {
@@ -19,4 +20,4 @@ $shell = New-Object -ComObject "Shell.Application"
 $shell.minimizeall()
 
 Start-Sleep -Seconds 2
-SetWallPaper.ps1 "C:\Users\533\Documents\GitHub\AssitantPowershell\img.jpg"
+.\SetWallPaper.ps1 "C:\Users\533\Documents\GitHub\AssitantPowershell\img.jpg" "Stretch"
