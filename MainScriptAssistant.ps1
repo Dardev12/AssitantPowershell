@@ -31,7 +31,7 @@ $BoutonEducation.Text = "Session Etude"
 $BoutonEducation.Add_Click({
     $Label.Text = "Passons au choses sérieuse !!!"
     MonteBot -sayTheLine "Passons au choses sérieuse !!!" -rate 0
-    C:\Users\533\Downloads\AssitantPowershell-main\ScriptProfilEtude.ps1
+    .\ScriptProfilEtude.ps1
 
 })
 
@@ -43,7 +43,7 @@ $BoutonGaming.Text = "Session Gaming"
 $BoutonGaming.Add_Click({
     $Label.Text = "Gaming Lets go"
     MonteBot -sayTheLine "Gaming Lets go" -rate 5
-    C:\Users\533\Downloads\AssitantPowershell-main\ScriptProfilGaming.ps1
+    .\ScriptProfilGaming.ps1
     
 })
 
