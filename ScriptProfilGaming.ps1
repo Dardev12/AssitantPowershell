@@ -1,5 +1,6 @@
 ﻿$Desktop    = $env:USERPROFILE + "\Desktop\"
 $site = ('https://www.twitch.tv', 'https://discord.com/', 'https://store.steampowered.com/')
+Set-Location "C:\Users\533\Documents\GitHub\AssitantPowershell\"
 
 
 ForEach($s in $site)
