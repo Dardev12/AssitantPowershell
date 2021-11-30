@@ -1,4 +1,10 @@
-﻿Function Set-WallPaper {
+﻿# Auteur Leo Mercier
+# Fichier SetWallPaper.ps1
+#
+# Script pour Afficher un Fond d'écran
+# PowerShell Bureau Windows.
+
+Function Set-WallPaper {
  
 <#
  

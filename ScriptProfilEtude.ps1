@@ -1,4 +1,9 @@
-﻿$Desktop    = $env:USERPROFILE + "\Desktop\"
+﻿# Auteur Leo Mercier
+# Fichier ScriptProfilEtude.ps1
+#
+# Script pour configurer un profil Étudiant à notre session
+
+$Desktop    = $env:USERPROFILE + "\Desktop\"
 $site = ('https://cegepba.omnivox.ca/Login/Account/Login', 'https://medium.com/tag/programming', 'https://github.com/login')
 $notesFile = $Desktop + "NOTES_$((Get-Date).ToString('yyyy-MM-dd')).txt"
 Set-Location ($env:USERPROFILE + "\Documents\GitHub\AssitantPowershell\")

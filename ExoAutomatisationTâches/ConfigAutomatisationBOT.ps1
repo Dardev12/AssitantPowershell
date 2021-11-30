@@ -1,5 +1,5 @@
 ﻿# Auteur Darren Lambert
-# Fichier ConfigTask.ps1
+# Fichier ConfigAutomatisationBOT.ps1
 #
 # Script pour configurer notre BOT de façon automatisé
 # Taches programmes.
