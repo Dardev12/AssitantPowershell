@@ -72,3 +72,4 @@ $Title.Text = "MonteBot"
 MonteBot -sayTheLine "Bonjour maître, Comment allez-vous ? !!!" -rate 0
 $Form.controls.AddRange(@($BoutonEducation,$Label,$BoutonGaming,$Title,$BoutonClose))
 $Form.ShowDialog()
+Set-Location "C:\Users\533\Documents\GitHub\AssitantPowershell\"
