@@ -31,6 +31,8 @@ $BoutonEducation.Text = "Session Etude"
 $BoutonEducation.Add_Click({
     $Label.Text = "Passons au choses sérieuse !!!"
     MonteBot -sayTheLine "Passons au choses sérieuse !!!" -rate 0
+    
+    Set-Location "C:\Users\533\Documents\GitHub\AssitantPowershell\"
     .\ScriptProfilEtude.ps1
 
 })
@@ -43,6 +45,8 @@ $BoutonGaming.Text = "Session Gaming"
 $BoutonGaming.Add_Click({
     $Label.Text = "Gaming Lets go"
     MonteBot -sayTheLine "Gaming Lets go" -rate 5
+    
+    Set-Location "C:\Users\533\Documents\GitHub\AssitantPowershell\"
     .\ScriptProfilGaming.ps1
     
 })
@@ -68,8 +72,6 @@ $Title.Font = [System.Drawing.Font]::new("Microsoft Sans Serif", 12, [System.Dra
 $Title.Location = New-Object System.Drawing.Point(100,30)
 $Title.Text = "MonteBot"
 
-
 MonteBot -sayTheLine "Bonjour maître, Comment allez-vous ? !!!" -rate 0
 $Form.controls.AddRange(@($BoutonEducation,$Label,$BoutonGaming,$Title,$BoutonClose))
 $Form.ShowDialog()
-Set-Location "C:\Users\533\Documents\GitHub\AssitantPowershell\"
