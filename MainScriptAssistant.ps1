@@ -6,10 +6,12 @@ function MonteBot{
 
     Add-Type -AssemblyName System.speech
     $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
-    $speak | Get-Member
-    Foreach ($voice in $speak.GetInstalledVoices()){
-    $Voice.VoiceInfo | Select-Object Gender, Name, Culture, Description
-    }
+    #$speak | Get-Member
+    #Foreach ($voice in $speak.GetInstalledVoices()){
+    #$Voice.VoiceInfo | Select-Object Gender, Name, Culture, Description
+    #}
+
+    $speak.SelectVoice('Microsoft Hortense Desktop')
     $speak.Rate = $rate
     $speak.Speak($sayTheLine)
 
@@ -29,6 +31,8 @@ $BoutonEducation.Text = "Session Etude"
 $BoutonEducation.Add_Click({
     $Label.Text = "Passons au choses sérieuse !!!"
     MonteBot -sayTheLine "Passons au choses sérieuse !!!" -rate 0
+    C:\Users\533\Downloads\AssitantPowershell-main\ScriptProfilEtude.ps1
+
 })
 
 $BoutonGaming = New-Object System.Windows.Forms.Button
@@ -39,6 +43,8 @@ $BoutonGaming.Text = "Session Gaming"
 $BoutonGaming.Add_Click({
     $Label.Text = "Gaming Lets go"
     MonteBot -sayTheLine "Gaming Lets go" -rate 5
+    C:\Users\533\Downloads\AssitantPowershell-main\ScriptProfilGaming.ps1
+    
 })
 
 $BoutonClose = New-Object System.Windows.Forms.Button
@@ -48,7 +54,8 @@ $BoutonClose.Height = 40
 $BoutonClose.Text = "Débrancher MonteBot"
 $BoutonClose.Add_Click({
     $Label.Text = "-_- Goodbye "
-    MonteBot -sayTheLine "Good bye " -rate -10
+    MonteBot -sayTheLine "Good bye " -rate -1
+    $Form.Close()
 })
 
 $Label = New-Object System.Windows.Forms.Label
@@ -61,5 +68,7 @@ $Title.Font = [System.Drawing.Font]::new("Microsoft Sans Serif", 12, [System.Dra
 $Title.Location = New-Object System.Drawing.Point(100,30)
 $Title.Text = "MonteBot"
 
+
+MonteBot -sayTheLine "Bonjour maître, Comment allez-vous ? !!!" -rate 0
 $Form.controls.AddRange(@($BoutonEducation,$Label,$BoutonGaming,$Title,$BoutonClose))
 $Form.ShowDialog()
