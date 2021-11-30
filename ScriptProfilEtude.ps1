@@ -1,23 +1,51 @@
 ﻿$Desktop    = $env:USERPROFILE + "\Desktop\"
 $site = ('https://cegepba.omnivox.ca/Login/Account/Login', 'https://medium.com/tag/programming', 'https://github.com/login')
 $notesFile = $Desktop + "NOTES_$((Get-Date).ToString('yyyy-MM-dd')).txt"
-Set-Location "C:\Users\533\Documents\GitHub\AssitantPowershell\"
+Set-Location ($env:USERPROFILE + "\Documents\GitHub\AssitantPowershell\")
 
-ForEach($s in $site)
+
+try
 {
-    Start-Process $s
-    Start-Sleep -Seconds 1
+    ForEach($s in $site)
+    {
+        Start-Process $s
+        Start-Sleep -Seconds 1
+    }
+}
+catch
+{
+    $wshell = New-Object -ComObject Wscript.Shell
+    $Output = $wshell.Popup("An error occur while oppening websites")
 }
 
-# open visual studio code
-Start-Process -WindowStyle Hidden code .
-# open notepad++ with textfile named by date of the day and save on the desktop
-Start-Sleep -Seconds 2
-start notepad++ $notesFile
+
+try
+{
+    # open visual studio code
+    Start-Process -WindowStyle Hidden code .
+    # open notepad++ with textfile named by date of the day and save on the desktop
+    Start-Sleep -Seconds 2
+    start notepad++ $notesFile
+}
+catch
+{
+    $wshell = New-Object -ComObject Wscript.Shell
+    $Output = $wshell.Popup("An error occur while oppening VScode and notepad++")
+}
+
 
 Start-Sleep -Seconds 2
 $shell = New-Object -ComObject "Shell.Application"
 $shell.minimizeall()
-
 Start-Sleep -Seconds 2
-.\SetWallPaper.ps1 "C:\Users\533\Documents\GitHub\AssitantPowershell\img.jpg" "Stretch"
+
+
+try
+{
+    .\SetWallPaper.ps1 "C:\Users\533\Documents\GitHub\AssitantPowershell\img.jpg" "Stretch"
+}
+catch
+{
+    $wshell = New-Object -ComObject Wscript.Shell
+    $Output = $wshell.Popup("An error occur while setting wallpaper")
+}
