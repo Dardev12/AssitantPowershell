@@ -3,6 +3,7 @@
 #
 # Script pour Executer l'interface de notre BOT
 
+#=========================Assistant Vocal============================================
 function MonteBot{
     param(
         $sayTheLine,
@@ -24,6 +25,7 @@ function MonteBot{
     }
 
 }
+#====================================================================================
 
 try
 {
@@ -123,6 +125,8 @@ $BoutonClose.Add_Click({
         $Output = $wshell.Popup("Erreur: Impossible de quitter le programme, Veuillez Faire Alt + F4")
     }
 })
+#======================================================================================================
+
 
 
 
