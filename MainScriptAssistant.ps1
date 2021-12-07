@@ -14,7 +14,7 @@ function MonteBot{
     {
         Add-Type -AssemblyName System.speech
         $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
-        $speak.SelectVoice('Microsoft Hortense Desktop')
+        
         $speak.Rate = $rate
         $speak.Speak($sayTheLine)
     }
